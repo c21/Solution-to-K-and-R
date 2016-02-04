@@ -1,0 +1,22 @@
+1. The scope of an external variable or a function lasts from the point at which
+   it is declared to the end of the file being compile.
+
+2. extern qualifier: if an external variable is to be referred to before it is
+   defined, or if it is defined in a different source file from the one where it is
+   being used, then an extern declaration is mandatory.
+
+3. A register declaration advises the compiler that the variable in question
+   will be heavily used. The idea is that register variables are to be placed in
+   machine registers, which may result in smaller and faster programs. But com-
+   pilers are free to ignore the advice.
+
+4.  The static declaration, applied to 
+    1). an external variable or function, limits the scope of that object to the 
+	rest of the source file being compiled.
+    2). an internal variable, the variable will remain in existence rather than coming and
+	going each time the function is activated.
+
+5. In the absence of explicit initialization, external and static variables are
+   guaranteed to be initialized to zero; automatic and register variables have unde-
+   fined (i.e., garbage) initial values.
+
