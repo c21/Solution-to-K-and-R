@@ -1,0 +1,45 @@
+1. The keyword struct introduces a structure declaration, which is a list of
+   declarations enclosed in braces. An optional name called a structure tag may
+   follow the word struct. The right brace that terminates the list of members 
+   may be followed by a list of variables.
+
+2. Both . and -> associate from left to right.
+   These four expressions are equivalent:
+   r.pt1.x
+   rp->pt1.x
+   (r.pt1).x
+   (rp->pt1).x
+
+3. Addition of two pointers is illegal. Subtraction is legal.
+
+4. A simple hash function for string: 
+   unsigned hash(char *s)
+   {
+	unsigned hashval;
+        for (hashval = 0; *s != '\0'; s++)
+                hashval = *s + 31 * hashval;
+        return hashval % HASHSIZE;
+   }
+
+5. typedef for creating new data type name,
+   typedef int Length
+   In effect, typedef is like #define, except that since it is interpreted by the compiler, 
+   it can cope with textual substitutions that are beyond the capabilities of the
+   preprocessor.
+   main reasons for using typedef:
+   1). The first is to parameterize a program against portability problems.
+       If typedefs are used for data types that may be machine-dependent, only the
+       typedefs need change when the program is moved.
+   2). It may be easier to understand than the true type
+
+6. bit-field:
+   struct s
+   {
+	unsigned int f1 : 1;
+	unsigned int f2 : 3;
+   }x; 
+   x.f1 has 1 bit, x.f2 has 2 bits. But they are not arrays, and they do
+   not have addresses, so the & operator cannot be applied to them.
+
+
+

@@ -1,0 +1,21 @@
+1. An array-and-index expression is equivalent to one written
+   as a pointer and offset. 
+   There is one difference between an array name(a) and a pointer(pa).
+   A pointer is a variable, so pa=a and pa++ are legal. But an
+   array name is not a variable; a=pa and a++ are illegal.
+
+2. a[-1] is syntactically legal.
+
+3. If p and q point to elements of the same array, and p<q, 
+   then q-p+1 is the number of elements from p to q inclusive.
+
+4. The value of *t++ is the character that t pointed to 
+   before t was incremented.
+
+5. Multi-dimensional array as function's argument or declaration, 
+   only the first dimension(subscript) of an array can be not specified; 
+   all the others have to be specified.
+
+6. The format argument of printf can be an expression.
+   E.g., printf ((argc > 1) ? "%s " : "%s", *++argv);
+
