@@ -67,10 +67,10 @@ and some (random) notes...
 
 1. else is associated with the closest previous else-less if.  
    if (n > 0)  
-	if (a > b)  
-		z = a;  
-	else  
-		z = b;  
+   &nbsp;if (a > b)  
+	&nbsp;&nbsp;	z = a;  
+   &nbsp;else  
+	&nbsp;&nbsp;	z = b;  
    the else goes with the inner if.
 
 ## Chapter 4. Functions and Program Structure 
