@@ -67,10 +67,10 @@ and some (random) notes...
 
 1. else is associated with the closest previous else-less if.  
    if (n > 0)  
-   &nbsp;if (a > b)  
-	&nbsp;&nbsp;	z = a;  
-   &nbsp;else  
-	&nbsp;&nbsp;	z = b;  
+   &nbsp;&nbsp;if (a > b)  
+	&nbsp;&nbsp;&nbsp;&nbsp;	z = a;  
+   &nbsp;&nbsp;else  
+	&nbsp;&nbsp;&nbsp;&nbsp;	z = b;  
    the else goes with the inner if.
 
 ## Chapter 4. Functions and Program Structure 
@@ -78,70 +78,70 @@ and some (random) notes...
 1. The scope of an external variable or a function lasts from the point at which<br>
    it is declared to the end of the file being compile.
 
-2. extern qualifier: if an external variable is to be referred to before it is
-   defined, or if it is defined in a different source file from the one where it is
+2. extern qualifier: if an external variable is to be referred to before it is<br>
+   defined, or if it is defined in a different source file from the one where it is<br>
    being used, then an extern declaration is mandatory.
 
-3. A register declaration advises the compiler that the variable in question
-   will be heavily used. The idea is that register variables are to be placed in
-   machine registers, which may result in smaller and faster programs. But com-
+3. A register declaration advises the compiler that the variable in question<br>
+   will be heavily used. The idea is that register variables are to be placed in<br>
+   machine registers, which may result in smaller and faster programs. But com-<br>
    pilers are free to ignore the advice.
 
-4. The static declaration, applied to 
-   1). an external variable or function, limits the scope of that object to the 
-       rest of the source file being compiled.
-   2). an internal variable, the variable will remain in existence rather than coming and
+4. The static declaration, applied to<br> 
+   1). an external variable or function, limits the scope of that object to the<br> 
+       rest of the source file being compiled.<br>
+   2). an internal variable, the variable will remain in existence rather than coming and<br>
        going each time the function is activated.
 
-5. In the absence of explicit initialization, external and static variables are
-   guaranteed to be initialized to zero; automatic and register variables have unde-
+5. In the absence of explicit initialization, external and static variables are<br>
+   guaranteed to be initialized to zero; automatic and register variables have unde-<br>
    fined (i.e., garbage) initial values.
 
-6. #include "filename", <filename>. If the filename is quoted, searching for the file 
-   typically begins where the source program was found; if it is not found there, or 
-   if the name is enclosed in < and >, searching follows an implementation-defined rule 
+6. #include "filename", <filename>. If the filename is quoted, searching for the file<br>
+   typically begins where the source program was found; if it is not found there, or<br> 
+   if the name is enclosed in < and >, searching follows an implementation-defined rule<br> 
    to find the file.
 
-7. String literals can be concatenated in C directly.
+7. String literals can be concatenated in C directly.<br>
    char s[] = "4" " 123"; // legal,  s = "4123"
 
-8. macro:
-   #define name replacement text
-   1). Normally the replacement text is the rest of the line, but a long defini-
-       tion may be continued onto several lines by placing a \ at the end of each line
-       to be continued.
+8. macro:<br>
+   #define name replacement text<br>
+   1). Normally the replacement text is the rest of the line, but a long defini-<br>
+       tion may be continued onto several lines by placing a \ at the end of each line<br>
+       to be continued.<br>
+   <br>
+   #define f(a, b) replacement text<br>
+   Each occurrence of a formal parameter (here a and b) will be replaced by the<br>
+   corresponding actual argument.<br>
+   1). #: Formal parameters are not replaced within quoted strings. Only if a<br>
+          parameter name is preceded by a #, the combination will be expanded<br> 
+          into a quoted string with the parameter replaced by the actual<br>
+          argument.<br>
+	  <br>
+	  e.g. #define dprint(expr) printf(#expr "=%d\n", expr)<br>
+	  dprint(x)  -> printf("x" "=%d\n", x);<br>
+	<br>
+   2).##: concatenate actual arguments. If a parameter in the replacement text is adja-<br>
+          cent to a ##, the parameter is replaced by the actual argument, the ## and sur-<br>
+          rounding white space are removed<br>
+	<br>
+	  e.g. #define paste(front, back) front ## back<br>
+          paste(name, 1)  ->  name1<br>
   
-   #define f(a, b) replacement text
-   Each occurrence of a formal parameter (here a and b) will be replaced by the
-   corresponding actual argument.
-   1). #: Formal parameters are not replaced within quoted strings. Only if a
-          parameter name is preceded by a #, the combination will be expanded 
-          into a quoted string with the parameter replaced by the actual
-          argument.
-
-	  e.g. #define dprint(expr) printf(#expr "=%d\n", expr)
-	  dprint(x)  -> printf("x" "=%d\n", x);
-
-   2).##: concatenate actual arguments. If a parameter in the replacement text is adja-
-          cent to a ##, the parameter is replaced by the actual argument, the ## and sur-
-          rounding white space are removed
-
-	  e.g. #define paste(front, back) front ## back
-          paste(name, 1)  ->  name1
-  
-9. conditional inclusion: include code selectively
-   1).
-   #if (constant integer expression: defined(xxx))
-      ...
-   #elif ... 
-      ...
-   #else
-      ...
-   #endif
+9. conditional inclusion: include code selectively<br>
+   1).<br>
+   #if (constant integer expression: defined(xxx))<br>
+   &nbsp;&nbsp;   ...<br>
+   #elif ...<br>
+   &nbsp;&nbsp;   ...<br>
+   #else<br>
+   &nbsp;&nbsp;   ...<br>
+   #endif<br>
  
    2). 
-   #ifndef(#ifdef) xxx
-   ... 
+   #ifndef(#ifdef) xxx<br>
+   ...<br> 
    #endif 
 
 
