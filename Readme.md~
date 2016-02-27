@@ -187,7 +187,7 @@ and some (random) notes...
 
 4. A simple hash function for string:<br> 
    ``` c 
-   unsigned hash(char *s)
+   unsigned hash(char \*s)<br>
    {
 	   	unsigned hashval;
 	    for (hashval = 0; *s != '\0'; s++)
@@ -227,15 +227,15 @@ and some (random) notes...
    There must be at least one named argument.<br>
    va_list p;<br>
    va_start(p, b)<br>
-   va_arg(p, /\*int,double,...\*/)<br>
-   ... <br>
+   va_arg(p, /*int,double,...*/)<br>
+   ... 
    va_end(p) <br>
 
 3. The file pointers stdin and stdout are objects of type FILE \*. They are<br>
    constants, however, not variables, so it is not possible to assign to them.
 
 ## Chapter 8. The UNIX System Interface 
-1. In the UNIX operating system, all input and output is done by reading or<br>
+1.In the UNIX operating system, all input and output is done by reading or<br>
   writing file. The user program refers to the file only by the file<br>
   descriptor(a non-negative intege). The program gets file descriptor by<br>
   opening the file.<br> 
