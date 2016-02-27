@@ -1,3 +1,3 @@
-# Solutions for The C Programming Language
+# Solution to K and R
 
-This is my solutions for The C Programming Language, 2nd Edition(https://en.wikipedia.org/wiki/The_C_Programming_Language). 
+This is my solution to K and R(the C book:https://en.wikipedia.org/wiki/The_C_Programming_Language). 
