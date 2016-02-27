@@ -7,7 +7,7 @@ and some (random) notes...
 
 ## Chapter 1. A Tutorial Introduction 
 
-1. printf("%3.2f", x);
+1. printf("%3.2f", x);  
    %a.bf: print a floating point number, with width a, b digits after decimal point
 
 2. assignment a = b+c has a value, which is the value of left hand side after assignment
