@@ -7,10 +7,8 @@ and some (random) notes...
 
 ## Chapter 1. A Tutorial Introduction 
 
-1. ``` c 
-   printf("%3.2f", x);
-   ```  
-    %a.bf: print a floating point number, with width a, b digits after decimal point
+1. printf("%3.2f", x);  
+   %a.bf: print a floating point number, with width a, b digits after decimal point
 
 2. assignment a = b+c has a value, which is the value of left hand side after assignment
 
@@ -39,16 +37,12 @@ and some (random) notes...
 
 4. The expression ++n increments n before its value is used, while   
    n++ increments n after its value has been used  
-   1)
-   ``` c  
+   1)  
    n = 5;  
-   x = n++;	// x = 5, n = 6
-   ```  
-   2)
-   ``` c   
+   x = n++;	// x = 5, n = 6  
+   2)  
    n = 5;   
    x = ++n;	// x = 6, n = 6
-   ```
 
 5. The unary operator ~ yields the one's complement of an integer.  
    That is, it converts each 1-bit into a O-bit and vice versa.
@@ -71,14 +65,12 @@ and some (random) notes...
 
 ## Chapter 3. Control Flow
 
-1. else is associated with the closest previous else-less if.
-	``` c 
-   if (n > 0) 
-	   if (a > b)  
-			z = a;  
+1. else is associated with the closest previous else-less if.  
+   if (n > 0)   
+&nbsp;&nbsp;	if (a > b)  
+&nbsp;&nbsp;&nbsp;&nbsp;	   z = a;  
    else  
-		z = b;  
-   ```
+&nbsp;&nbsp;&nbsp;&nbsp;	z = b;  
    the else goes with the inner if.
 
 ## Chapter 4. Functions and Program Structure 
