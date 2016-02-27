@@ -1,0 +1,6 @@
+1.In the UNIX operating system, all input and output is done by reading or
+  writing file. The user program refers to the file only by the file
+  descriptor(a non-negative intege). The program gets file descriptor by
+  opening the file. 
+  functions: open, read, write, close, lseek(change read/write position)
+ 

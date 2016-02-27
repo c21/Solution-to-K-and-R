@@ -1,0 +1,16 @@
+1. printf's return value: the number of characters printed.
+
+2. function declaration with variable-length argument list
+   int f(int a, double b, ...)
+   where the  ... means that the number and types of these arguments
+   may vary. The declaration ... can only appear at the end of an argument list.
+   There must be at least one named argument.
+   va_list p;
+   va_start(p, b)
+   va_arg(p, /*int,double,...*/)
+   ... 
+   va_end(p) 
+
+3. The file pointers stdin and stdout are objects of type FILE *. They are
+   constants, however, not variables, so it is not possible to assign to them.
+
