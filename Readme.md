@@ -97,7 +97,7 @@ and some (random) notes...
    guaranteed to be initialized to zero; automatic and register variables have unde-<br>
    fined (i.e., garbage) initial values.
 
-6. #include "filename", <filename>. If the filename is quoted, searching for the file<br>
+6. \#include "filename", \<filename\>. If the filename is quoted, searching for the file<br>
    typically begins where the source program was found; if it is not found there, or<br> 
    if the name is enclosed in < and >, searching follows an implementation-defined rule<br> 
    to find the file.
@@ -106,43 +106,43 @@ and some (random) notes...
    char s[] = "4" " 123"; // legal,  s = "4123"
 
 8. macro:<br>
-   #define name replacement text<br>
+   \#define name replacement text<br>
    1). Normally the replacement text is the rest of the line, but a long defini-<br>
        tion may be continued onto several lines by placing a \ at the end of each line<br>
        to be continued.<br>
    <br>
-   #define f(a, b) replacement text<br>
+   \#define f(a, b) replacement text<br>
    Each occurrence of a formal parameter (here a and b) will be replaced by the<br>
    corresponding actual argument.<br>
-   1). #: Formal parameters are not replaced within quoted strings. Only if a<br>
-          parameter name is preceded by a #, the combination will be expanded<br> 
+   1). \#: Formal parameters are not replaced within quoted strings. Only if a<br>
+          parameter name is preceded by a \#, the combination will be expanded<br> 
           into a quoted string with the parameter replaced by the actual<br>
           argument.<br>
 	  <br>
 	  e.g. #define dprint(expr) printf(#expr "=%d\n", expr)<br>
 	  dprint(x)  -> printf("x" "=%d\n", x);<br>
 	<br>
-   2).##: concatenate actual arguments. If a parameter in the replacement text is adja-<br>
-          cent to a ##, the parameter is replaced by the actual argument, the ## and sur-<br>
+   2).\#\#: concatenate actual arguments. If a parameter in the replacement text is adja-<br>
+          cent to a \#\#, the parameter is replaced by the actual argument, the \#\# and sur-<br>
           rounding white space are removed<br>
 	<br>
-	  e.g. #define paste(front, back) front ## back<br>
+	  e.g. \#define paste(front, back) front \#\# back<br>
           paste(name, 1)  ->  name1<br>
   
 9. conditional inclusion: include code selectively<br>
    1).<br>
-   #if (constant integer expression: defined(xxx))<br>
+   \#if (constant integer expression: defined(xxx))<br>
    &nbsp;&nbsp;   ...<br>
-   #elif ...<br>
+   \#elif ...<br>
    &nbsp;&nbsp;   ...<br>
-   #else<br>
+   \#else<br>
    &nbsp;&nbsp;   ...<br>
-   #endif<br>
+   \#endif<br>
  
    2). 
-   #ifndef(#ifdef) xxx<br>
+   \#ifndef(\#ifdef) xxx<br>
    ...<br> 
-   #endif 
+   \#endif 
 
 
 ## Chapter 5. 
