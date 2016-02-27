@@ -1,3 +1,25 @@
 # Solution to K and R
 
-This is my solution to K and R(the C book:https://en.wikipedia.org/wiki/The_C_Programming_Language). 
+This repo is my (ugly) solution to exercises in K&R book
+(https://en.wikipedia.org/wiki/The_C_Programming_Language). 
+
+and some (random) notes...
+
+## Chapter 1. A Tutorial Introduction 
+
+1. printf("%3.2f", x);
+   %a.bf: print a floating point number, with width a, b digits after decimal point
+
+2. assignment a = b+c has a value, which is the value of left hand side after assignment
+
+3. EOF(end of file) is -1
+
+4. char is just small integer, '0' is essentially an integer number
+
+5. in C, function's argument is call by value
+
+6. when using external variable, one should use "extern" to make variable declaration
+   definition: variable is created or assigned storage
+   declaration: no storage is allocated   
+
+7. the default return value type of function is int
