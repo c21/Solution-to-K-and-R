@@ -139,16 +139,40 @@ and some (random) notes...
    &nbsp;&nbsp;   ...<br>
    \#endif<br>
  
-   2). 
+   2).<br> 
    \#ifndef(\#ifdef) xxx<br>
    ...<br> 
    \#endif 
 
 
-## Chapter 5. 
+## Chapter 5. Pointers and Arrays 
 
-## Chapter 6. 
+1. An array-and-index expression is equivalent to one written<br>
+   as a pointer and offset.<br> 
+   There is one difference between an array name(a) and a pointer(pa).<br>
+   A pointer is a variable, so pa=a and pa++ are legal. But an<br>
+   array name is not a variable; a=pa and a++ are illegal.
 
-## Chapter 7. 
+2. a[-1] is syntactically legal.
 
-## Chapter 8. 
+3. If p and q point to elements of the same array, and p\<q,<br> 
+   then q-p+1 is the number of elements from p to q inclusive.<br>
+
+4. The value of \*t++ is the character that t pointed to<br> 
+   before t was incremented.
+
+5. Multi-dimensional array as function's argument or declaration,<br> 
+   only the first dimension(subscript) of an array can be not specified;<br> 
+   all the others have to be specified.
+
+6. The format argument of printf can be an expression.<br>
+   E.g., printf ((argc > 1) ? "%s " : "%s", \*++argv);
+
+## Chapter 6. Structures 
+
+
+## Chapter 7. Input and Output
+
+
+## Chapter 8. The UNIX System Interface 
+
