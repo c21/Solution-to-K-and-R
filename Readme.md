@@ -168,8 +168,54 @@ and some (random) notes...
 6. The format argument of printf can be an expression.<br>
    E.g., printf ((argc > 1) ? "%s " : "%s", \*++argv);
 
+
 ## Chapter 6. Structures 
 
+1. The keyword struct introduces a structure declaration, which is a list of<br>
+   declarations enclosed in braces. An optional name called a structure tag may<br>
+   follow the word struct. The right brace that terminates the list of members<br> 
+   may be followed by a list of variables.
+
+2. Both . and -\> associate from left to right.<br>
+   These four expressions are equivalent:<br>
+   r.pt1.x<br>
+   rp-\>pt1.x<br>
+   (r.pt1).x<br>
+   (rp-\>pt1).x<br>
+
+3. Addition of two pointers is illegal. Subtraction is legal.
+
+4. A simple hash function for string:<br> 
+   ``` c 
+   unsigned hash(char \*s)<br>
+   {
+	unsigned hashval;
+        for (hashval = 0; *s != '\0'; s++)
+                hashval = *s + 31 * hashval;
+        return hashval % HASHSIZE;
+   }
+   ```
+5. typedef for creating new data type name,<br> 
+   typedef int Length<br> 
+   In effect, typedef is like \#define, except that since it is interpreted by the compiler,<br>  
+   it can cope with textual substitutions that are beyond the capabilities of the<br> 
+   preprocessor.<br> 
+   main reasons for using typedef:<br> 
+   1). The first is to parameterize a program against portability problems.<br> 
+       If typedefs are used for data types that may be machine-dependent, only the<br> 
+       typedefs need change when the program is moved.<br> 
+   2). It may be easier to understand than the true type<br> 
+
+6. bit-field:<br> 
+   ``` c
+   struct s
+   {
+	unsigned int f1 : 1;
+	unsigned int f2 : 3;
+   }x; 
+   ```
+   x.f1 has 1 bit, x.f2 has 2 bits. But they are not arrays, and they do<br> 
+   not have addresses, so the & operator cannot be applied to them.
 
 ## Chapter 7. Input and Output
 
