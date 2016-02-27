@@ -62,3 +62,93 @@ and some (random) notes...
 
 10. C, like most languages, does not specify the order in which the operands of  
    an operator are evaluated. (The exceptions are &&, ||, ?:, and ',')
+
+## Chapter 3. Control Flow
+
+1. else is associated with the closest previous else-less if.  
+   if (n > 0)  
+	if (a > b)  
+		z = a;  
+	else  
+		z = b;  
+   the else goes with the inner if.
+
+## Chapter 4. Functions and Program Structure 
+
+1. The scope of an external variable or a function lasts from the point at which<br>
+   it is declared to the end of the file being compile.
+
+2. extern qualifier: if an external variable is to be referred to before it is
+   defined, or if it is defined in a different source file from the one where it is
+   being used, then an extern declaration is mandatory.
+
+3. A register declaration advises the compiler that the variable in question
+   will be heavily used. The idea is that register variables are to be placed in
+   machine registers, which may result in smaller and faster programs. But com-
+   pilers are free to ignore the advice.
+
+4. The static declaration, applied to 
+   1). an external variable or function, limits the scope of that object to the 
+       rest of the source file being compiled.
+   2). an internal variable, the variable will remain in existence rather than coming and
+       going each time the function is activated.
+
+5. In the absence of explicit initialization, external and static variables are
+   guaranteed to be initialized to zero; automatic and register variables have unde-
+   fined (i.e., garbage) initial values.
+
+6. #include "filename", <filename>. If the filename is quoted, searching for the file 
+   typically begins where the source program was found; if it is not found there, or 
+   if the name is enclosed in < and >, searching follows an implementation-defined rule 
+   to find the file.
+
+7. String literals can be concatenated in C directly.
+   char s[] = "4" " 123"; // legal,  s = "4123"
+
+8. macro:
+   #define name replacement text
+   1). Normally the replacement text is the rest of the line, but a long defini-
+       tion may be continued onto several lines by placing a \ at the end of each line
+       to be continued.
+  
+   #define f(a, b) replacement text
+   Each occurrence of a formal parameter (here a and b) will be replaced by the
+   corresponding actual argument.
+   1). #: Formal parameters are not replaced within quoted strings. Only if a
+          parameter name is preceded by a #, the combination will be expanded 
+          into a quoted string with the parameter replaced by the actual
+          argument.
+
+	  e.g. #define dprint(expr) printf(#expr "=%d\n", expr)
+	  dprint(x)  -> printf("x" "=%d\n", x);
+
+   2).##: concatenate actual arguments. If a parameter in the replacement text is adja-
+          cent to a ##, the parameter is replaced by the actual argument, the ## and sur-
+          rounding white space are removed
+
+	  e.g. #define paste(front, back) front ## back
+          paste(name, 1)  ->  name1
+  
+9. conditional inclusion: include code selectively
+   1).
+   #if (constant integer expression: defined(xxx))
+      ...
+   #elif ... 
+      ...
+   #else
+      ...
+   #endif
+ 
+   2). 
+   #ifndef(#ifdef) xxx
+   ... 
+   #endif 
+
+
+## Chapter 5. 
+
+## Chapter 6. 
+
+## Chapter 7. 
+
+## Chapter 8. 
