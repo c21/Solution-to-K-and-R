@@ -189,8 +189,8 @@ and some (random) notes...
    ``` c 
    unsigned hash(char \*s)<br>
    {
-   	unsigned hashval;
-        for (hashval = 0; *s != '\0'; s++)
+   		unsigned hashval;
+   	for (hashval = 0; *s != '\0'; s++)
                 hashval = *s + 31 * hashval;
         return hashval % HASHSIZE;
    }
@@ -210,8 +210,8 @@ and some (random) notes...
    ``` c
    struct s
    {
-	unsigned int f1 : 1;
-	unsigned int f2 : 3;
+		unsigned int f1 : 1;
+		unsigned int f2 : 3;
    }x; 
    ```
    x.f1 has 1 bit, x.f2 has 2 bits. But they are not arrays, and they do<br> 
