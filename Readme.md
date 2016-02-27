@@ -60,5 +60,5 @@ and some (random) notes...
  
 9. sizeof is an operator
 
-10.C, like most languages, does not specify the order in which the operands of  
+10. C, like most languages, does not specify the order in which the operands of  
    an operator are evaluated. (The exceptions are &&, ||, ?:, and ',')
