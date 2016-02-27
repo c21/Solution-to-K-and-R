@@ -189,7 +189,7 @@ and some (random) notes...
    ``` c 
    unsigned hash(char \*s)<br>
    {
-	unsigned hashval;
+   	unsigned hashval;
         for (hashval = 0; *s != '\0'; s++)
                 hashval = *s + 31 * hashval;
         return hashval % HASHSIZE;
