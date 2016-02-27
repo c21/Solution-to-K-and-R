@@ -18,8 +18,8 @@ and some (random) notes...
 
 5. in C, function's argument is call by value
 
-6. when using external variable, one should use "extern" to make variable declaration
-   definition: variable is created or assigned storage
+6. when using external variable, one should use "extern" to make variable declaration  
+   definition: variable is created or assigned storage  
    declaration: no storage is allocated   
 
 7. the default return value type of function is int
@@ -31,34 +31,34 @@ and some (random) notes...
 
 2. short, long, signed, unsigned are qualifiers 
 
-3. The standard header <ctype.h> defines a family of functions that 
-   provide tests and conversionsthat are independent of character
+3. The standard header <ctype.h> defines a family of functions that   
+   provide tests and conversionsthat are independent of character  
    set. e.g. tolower(), isdigit()
 
-4. The expression ++n increments n before its value is used, while 
-   n++ increments n after its value has been used
-   1)
-   n = 5;
-   x = n++;	// x = 5, n = 6
-   2)
-   n = 5; 
+4. The expression ++n increments n before its value is used, while   
+   n++ increments n after its value has been used  
+   1)  
+   n = 5;  
+   x = n++;	// x = 5, n = 6  
+   2)  
+   n = 5;   
    x = ++n;	// x = 6, n = 6
 
-5. The unary operator ~ yields the one's complement of an integer.
+5. The unary operator ~ yields the one's complement of an integer.  
    That is, it converts each 1-bit into a O-bit and vice versa.
 
-6. Right shifting an unsigned quantity always fills vacated bits with zero. 
-   Right shifting a signed quantity will fill with sign bits 
-   ("arithmetic shift") on some machines and with O-bits ("logical shift") 
+6. Right shifting an unsigned quantity always fills vacated bits with zero.   
+   Right shifting a signed quantity will fill with sign bits   
+   ("arithmetic shift") on some machines and with O-bits ("logical shift")   
    on others.
 
-7. expr1 op= expr2  is equivalent to expr1 = (expr1) op (expr2)
+7. expr1 op= expr2  is equivalent to expr1 = (expr1) op (expr2)  
    x *= y+1 is equivalent to x = x * (y+1)
 
-8. The conditional expression expr1 ? expr2 : expr3
-   Only one of expr2 and expr3 is evaluated.
+8. The conditional expression expr1 ? expr2 : expr3  
+   Only one of expr2 and expr3 is evaluated.  
  
 9. sizeof is an operator
 
-10.C, like most languages, does not specify the order in which the operands of
+10.C, like most languages, does not specify the order in which the operands of  
    an operator are evaluated. (The exceptions are &&, ||, ?:, and ',')
