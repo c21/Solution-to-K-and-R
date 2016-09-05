@@ -1,8 +1,6 @@
 # Solution to K and R
 
-This repo is my (ugly) solution to exercises in [K&R C book](https://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628). 
-
-and some (random) notes...
+This repo is my (ugly) solution to exercises in [K&R C book](https://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628), and some (random) notes...
 
 ## Chapter 1. A Tutorial Introduction 
 
