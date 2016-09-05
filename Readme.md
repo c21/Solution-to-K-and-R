@@ -1,7 +1,6 @@
 # Solution to K and R
 
-This repo is my (ugly) solution to exercises in K&R book
-(https://en.wikipedia.org/wiki/The_C_Programming_Language). 
+This repo is my (ugly) solution to exercises in [K&R C book](https://en.wikipedia.org/wiki/The_C_Programming_Language). 
 
 and some (random) notes...
 
